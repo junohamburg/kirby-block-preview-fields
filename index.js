@@ -6,7 +6,7 @@ panel.plugin('junohamburg/block-preview-fields', {
 
       unsubscribe();
 
-      // Create custom store for block selector
+      // Create custom store
       Vue.$store.registerModule('blockPreviewFields', {
         state: () => ({
           options: {}
