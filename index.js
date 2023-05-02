@@ -53,7 +53,7 @@ panel.plugin('junohamburg/block-preview-fields', {
           return Object.values(this.fieldset.tabs).length > 1;
         },
         toggleIcon() {
-          return this.isHidden ? 'angle-right' : 'angle-down';
+          return this.isHidden ? 'angle-down' : 'angle-up';
         },
         // https://github.com/getkirby/kirby/blob/main/panel/src/components/Forms/Blocks/BlockTitle.vue
         icon() {
