@@ -30,7 +30,7 @@ In your custom block blueprint:
 1. Add `preview: fields` to display the block fields.
 2. Add `wysiwyg: true` to prevent the drawer from opening automatically after creating a new block.
 
-### Example:
+### Example
 **site/blueprints/blocks/custom-block.yml**
 ```yml
 name: Block Name
@@ -45,6 +45,7 @@ fields:
 1. **Hide block icons**. This is helpful if you are using our [Kirby Visual Block Selector](https://github.com/junohamburg/kirby-visual-block-selector).
 2. **Disable equal height tabs**. By default, the largest tab sets the overall height, so there are no jumps when switching between tabs.
 
+### Example
 **site/config/config.php**
 ```php
 <?php
