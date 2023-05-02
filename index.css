@@ -1,0 +1,93 @@
+/*
+  Please note:
+  - Kirby Block Preview Fields uses existing Kirby components and classes.
+  - Some classes and styles are overwritten.
+*/
+
+.k-block-preview-fields {
+  margin: calc(-0.75rem) -0.75rem;
+  background: var(--color-gray-100);
+  border-radius: var(--rounded);
+}
+
+/* Darker border at top and bottom, does not work in Firefox */
+.k-block-container:not(:last-of-type):has(
+    > .k-block > .k-block-preview-fields
+  ) {
+  border-bottom: 1px solid var(--color-gray-400);
+}
+
+.k-block-container:not(:last-of-type):has(
+    + .k-block-container .k-block > .k-block-preview-fields
+  ) {
+  border-bottom: 1px solid var(--color-gray-400);
+}
+
+/* Title */
+.k-block-preview-fields > .k-block-title {
+  --drawer-header-height: 2.5rem;
+  padding: 0.75rem;
+  background: var(--color-white);
+  border-top-left-radius: var(--rounded);
+  border-top-right-radius: var(--rounded);
+}
+
+/* Icon */
+.k-block-preview-fields > .k-block-title > .k-icon {
+  width: 1rem;
+  margin-right: 0.625rem;
+  color: var(--color-gray-500);
+}
+
+/* Tabs */
+.k-block-preview-fields > .k-block-title > .k-drawer-tabs {
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: -0.75rem;
+  margin-bottom: -0.75rem;
+}
+
+/* Active tab */
+.k-block-preview-fields
+  > .k-block-title
+  .k-drawer-tab.k-button[aria-current]:after {
+  height: 1px;
+  bottom: 0px;
+}
+
+/* Toggle button */
+.k-block-preview-fields-toggle {
+  height: var(--drawer-header-height);
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+  margin-top: -0.75rem;
+  margin-bottom: -0.75rem;
+  margin-right: -0.125rem;
+}
+
+.k-block-preview-fields-toggle:not(:hover):not(:focus) {
+  color: var(--color-gray-500);
+}
+
+/* Fieldset */
+.k-block-preview-fields-fieldset-wrapper.equal-height {
+  display: grid;
+}
+
+.k-block-preview-fields-fieldset-wrapper.equal-height > * {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.k-block-preview-fields-fieldset-wrapper.equal-height > .k-fieldset.hidden {
+  visibility: hidden;
+}
+
+.k-block-preview-fields-fieldset-wrapper:not(.equal-height)
+  > .k-fieldset.hidden {
+  display: none;
+}
+
+.k-block-preview-fields-fieldset-wrapper > .k-fieldset {
+  border-top: 1px solid rgb(230, 230, 230);
+  padding: 1.25rem 1.5rem 2.5rem 1.5rem;
+}

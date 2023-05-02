@@ -1,0 +1,16 @@
+{
+  "name": "junohamburg/kirby-block-preview-fields",
+  "description": "Kirby Block Preview Fields",
+  "license": "MIT",
+  "type": "kirby-plugin",
+  "version": "1.0.0",
+  "authors": [
+    {
+      "name": "JUNO",
+      "email": "github@juno-hamburg.com"
+    }
+  ],
+  "require": {
+    "getkirby/composer-installer": "^1.1"
+  }
+}
