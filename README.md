@@ -2,9 +2,9 @@
 
 This plugin for Kirby 3 displays the block fields directly in the block preview.
 
-Inspired by the [Kirby Fields Block](https://github.com/jongacnik/kirby-fields-block), but this block preview supports tabs and the design aligns more closely with the Kirby UI.
-
 ![Block Preview Fields](preview.jpg)
+
+Inspired by the [Kirby Fields Block](https://github.com/jongacnik/kirby-fields-block), but this block preview supports tabs and the design aligns more closely with the Kirby UI.
 
 ## Installation
 
