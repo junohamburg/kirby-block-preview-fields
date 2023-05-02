@@ -60,7 +60,7 @@ return [
 
 Please note: These options apply to all block previews. It is currently not possible / very difficult to add custom options to block previews.
 
-## Known issues:
+## Known issues
 1. This block preview uses the `angle-down` icon to collapse the block preview. The Kirby `layout` field uses the `angle-down` icon to open a dropdown with options.
 
 ## License
