@@ -1,4 +1,4 @@
-panel.plugin('junohamburg/kirby-block-preview-fields', {
+panel.plugin('junohamburg/block-preview-fields', {
   created(Vue) {
     const unsubscribe = Vue.$store.subscribeAction(async (action, state) => {
       // Fetch options once, but only if user is logged in
