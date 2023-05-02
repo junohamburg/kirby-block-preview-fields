@@ -27,16 +27,25 @@ composer require junohamburg/kirby-block-preview-fields
 ## Usage
 
 In your custom block blueprint:
+
 1. Add `preview: fields` to display the block fields.
 2. Add `wysiwyg: true` to prevent the drawer from opening automatically after creating a new block.
 
 Example: **site/blueprints/blocks/custom-block.yml**
+
 ```yml
 name: Block Name
 preview: fields
 wysiwyg: true
-fields:
-  ...
+tabs:
+  content:
+    label: Content
+    fields:
+      ...
+  settings:
+    label: Settings
+    fields:
+      ...
 ```
 
 ## Available options
@@ -44,7 +53,8 @@ fields:
 1. **Hide block icons**. This is helpful if you are using our [Kirby Visual Block Selector](https://github.com/junohamburg/kirby-visual-block-selector).
 2. **Disable equal height tabs**. By default, the largest tab sets the overall height, so there are no jumps when switching between tabs.
 
- **site/config/config.php**
+**site/config/config.php**
+
 ```php
 <?php
 
@@ -59,6 +69,7 @@ return [
 Please note: These options apply to all block previews. It is currently not possible / very difficult to add custom options to block previews.
 
 ## Known issues
+
 1. This block preview uses the `angle-down` icon to collapse the block preview. The Kirby `layout` field uses the `angle-down` icon to open a dropdown with options.
 
 ## License
