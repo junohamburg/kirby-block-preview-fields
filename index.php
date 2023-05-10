@@ -1,4 +1,6 @@
-<?php Kirby::plugin('junohamburg/block-preview-fields', [
+<?php
+
+Kirby::plugin('junohamburg/block-preview-fields', [
   'options' => [
     'icon' => true,
     'equalHeightTabs' => true,
