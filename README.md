@@ -24,7 +24,7 @@ git submodule add https://github.com/junohamburg/kirby-block-preview-fields.git 
 composer require junohamburg/kirby-block-preview-fields
 ```
 
-## Usage
+## Setup
 
 In your custom block blueprint:
 
