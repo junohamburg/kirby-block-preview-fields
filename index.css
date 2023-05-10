@@ -63,6 +63,14 @@
   margin-top: -0.75rem;
   margin-bottom: -0.75rem;
   margin-right: -0.125rem;
+  margin-left: auto;
+}
+
+.k-block-preview-fields
+  > .k-block-title
+  > .k-drawer-tabs
+  + .k-block-preview-fields-toggle {
+  margin-left: 0;
 }
 
 .k-block-preview-fields-toggle:not(:hover):not(:focus) {

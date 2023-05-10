@@ -100,7 +100,7 @@ panel.plugin('junohamburg/block-preview-fields', {
               {{ label }}
             </span>
 
-            <nav class="k-drawer-tabs">
+            <nav class="k-drawer-tabs" v-if="!isHidden">
               <k-button
                 v-if="showTabs"
                 v-for="tab in fieldset.tabs"
