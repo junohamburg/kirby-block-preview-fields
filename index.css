@@ -1,7 +1,7 @@
 /*
   Please note:
   - Kirby Block Preview Fields uses existing Kirby components and classes.
-  - Some classes and styles are overwritten.
+  - Some classes and styles are overridden.
 */
 
 .k-block-preview-fields {
@@ -101,7 +101,19 @@
   padding: 1.25rem 1.5rem 2.5rem 1.5rem;
 }
 
-/* --------- Overrides --------- */
+/* Overrides */
+
+/* Fix collapsed border in layout field, does not work in Firefox */
+.k-layout-column
+  .k-block-container:nth-child(1):has(+ .k-blocks-empty)
+  .k-block-preview-fields-hidden
+  > .k-block-title,
+.k-layout-column
+  .k-block-container:nth-child(2):has(+ .k-blocks-empty)
+  .k-block-preview-fields-hidden
+  > .k-block-title {
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
 
 /* Fix empty blocks placeholder in layout field */
 .k-layout-column .k-block-preview-fields .k-blocks-empty {
