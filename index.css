@@ -100,3 +100,33 @@
   border-top: 1px solid rgb(230, 230, 230);
   padding: 1.25rem 1.5rem 2.5rem 1.5rem;
 }
+
+/* --------- Overrides --------- */
+
+/* Fix empty blocks placeholder in layout field */
+.k-layout-column .k-block-preview-fields .k-blocks-empty {
+  position: static;
+  opacity: 1;
+  align-items: stretch;
+  justify-content: flex-start;
+  border: 1px dashed var(--color-border);
+}
+
+.k-layout-column .k-block-preview-fields .k-blocks-empty.k-empty .k-icon {
+  width: 36px;
+}
+
+[dir='ltr']
+  .k-layout-column
+  .k-block-preview-fields
+  .k-blocks-empty.k-empty
+  .k-icon {
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Fix nested blocks field in layout field */
+.k-layout-column .k-block-preview-fields .k-blocks:not([data-empty='true']) {
+  background: var(--color-white);
+  box-shadow: var(--shadow);
+  border-radius: var(--rounded);
+}
