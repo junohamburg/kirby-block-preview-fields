@@ -20,6 +20,11 @@ panel.plugin('junohamburg/block-preview-fields', {
           updateOptions({ commit }, { options }) {
             commit('updateOptions', options);
           }
+        },
+        getters: {
+          getOptions(options) {
+            return options.options
+          }
         }
       });
 
@@ -36,13 +41,16 @@ panel.plugin('junohamburg/block-preview-fields', {
   blocks: {
     fields: {
       data() {
+        const options = this.$store.getters.getOptions
+        const collapsedByDefault = options.collapsedByDefault
+        const storageValue = sessionStorage.getItem(
+          `kirby.blockPreviewFields.${this.$attrs.endpoints.field}.${this.$attrs.id}`
+        );
+
+        // if option collapsedByDefault is set use its value otherwise default to session storage
         return {
           currentTab: Object.values(this.fieldset.tabs)[0].name,
-          isHidden: JSON.parse(
-            sessionStorage.getItem(
-              `kirby.blockPreviewFields.${this.$attrs.endpoints.field}.${this.$attrs.id}`
-            )
-          )
+          isHidden: storageValue ? JSON.parse(storageValue) : collapsedByDefault
         };
       },
       computed: {
