@@ -51,6 +51,7 @@ tabs:
 
 1. **Hide block icons**. This is helpful if you are using our [Kirby Visual Block Selector](https://github.com/junohamburg/kirby-visual-block-selector).
 2. **Disable equal height tabs**. By default, the largest tab sets the overall height, so there are no jumps when switching between tabs.
+3. **Collapse blocks by default**. Useful to declutter the panel if a high number of blocks is present.
 
 **site/config/config.php**
 
@@ -61,6 +62,7 @@ return [
   'junohamburg.block-preview-fields' => [
     'icon' => false, // default: true
     'equalHeightTabs' => false // default: true
+    'collapsedByDefault' => true // default: false
   ],
 ];
 ```
