@@ -41,16 +41,30 @@ panel.plugin('junohamburg/block-preview-fields', {
   blocks: {
     fields: {
       data() {
-        const options = this.$store.getters.getOptions
-        const collapsedByDefault = options.collapsedByDefault
+        const options = this.$store.getters.getOptions;
+        const collapsedByDefault = options.collapsedByDefault;
+        var isHidden = collapsedByDefault;
         const storageValue = sessionStorage.getItem(
           `kirby.blockPreviewFields.${this.$attrs.endpoints.field}.${this.$attrs.id}`
         );
 
-        // if option collapsedByDefault is set use its value otherwise default to session storage
+        // if the storage value is null the block just got created and shouldn't be hidden
+        if(storageValue === null) {
+          isHidden = false
+
+          // saving the item's state will make sure that the item isn't interpreted as a new block on next load
+          sessionStorage.setItem(
+            `kirby.blockPreviewFields.${this.$attrs.endpoints.field}.${this.$attrs.id}`,
+            isHidden
+          );
+        } else {
+          // all other blocks get controlled by the config value
+          isHidden = collapsedByDefault
+        }
+
         return {
           currentTab: Object.values(this.fieldset.tabs)[0].name,
-          isHidden: storageValue ? JSON.parse(storageValue) : collapsedByDefault
+          isHidden: isHidden
         };
       },
       computed: {
