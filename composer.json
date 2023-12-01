@@ -3,7 +3,7 @@
   "description": "Kirby Block Preview Fields",
   "license": "MIT",
   "type": "kirby-plugin",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "authors": [
     {
       "name": "JUNO",
@@ -11,6 +11,7 @@
     }
   ],
   "require": {
+    "getkirby/cms": ">=3.6.0 <3.10.0",
     "getkirby/composer-installer": "^1.1"
   }
 }
