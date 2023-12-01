@@ -14,16 +14,16 @@ Please note: In **Kirby 4**, there is now a native implementation of `preview: f
 
 Download and copy this repository to `/site/plugins/kirby-block-preview-fields`.
 
-### Git submodule
-
-```
-git submodule add https://github.com/junohamburg/kirby-block-preview-fields.git site/plugins/kirby-block-preview-fields
-```
-
 ### Composer
 
 ```
 composer require junohamburg/kirby-block-preview-fields
+```
+
+### Git submodule
+
+```
+git submodule add https://github.com/junohamburg/kirby-block-preview-fields.git site/plugins/kirby-block-preview-fields
 ```
 
 ## Setup
