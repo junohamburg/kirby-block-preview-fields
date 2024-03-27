@@ -5,9 +5,9 @@ use Kirby\Cms\App as Kirby;
 // Validate Kirby version
 if (
   version_compare(Kirby::version() ?? '0.0.0', '3.6.0', '<') === true ||
-  version_compare(Kirby::version() ?? '0.0.0', '3.10.0', '>=') === true
+  version_compare(Kirby::version() ?? '0.0.0', '3.11.0', '>=') === true
 ) {
-  throw new Exception('The block preview fields plugin supports Kirby 3.6.0 to 3.9.x');
+  throw new Exception('The block preview fields plugin supports Kirby 3.6.0 to 3.10.x');
 }
 
 Kirby::plugin('junohamburg/block-preview-fields', [
